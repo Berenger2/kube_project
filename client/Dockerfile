@@ -1,8 +1,15 @@
-FROM node:alpine
+FROM nginx
+
+RUN apt update && apt install -y nodejs npm
 
 WORKDIR /app
-COPY package.json ./
+COPY package* ./
+
 RUN npm install
+
 COPY ./ ./
 
-CMD ["npm", "start"]
+RUN npm run build
+RUN cp -r build/* /usr/share/nginx/html
+
+CMD [ "nginx", "-g", "daemon off;"]
