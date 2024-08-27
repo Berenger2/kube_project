@@ -1,6 +1,6 @@
-FROM nginx
+FROM nginx:alpine
 
-RUN apt update && apt install -y nodejs npm
+RUN apk add nodejs npm
 
 WORKDIR /app
 COPY package* ./
