@@ -1,8 +1,7 @@
-FROM nginx:alpine
-
-RUN apk add nodejs npm
+FROM node:slim as builder
 
 WORKDIR /app
+
 COPY package* ./
 
 RUN npm install
@@ -10,6 +9,9 @@ RUN npm install
 COPY ./ ./
 
 RUN npm run build
-RUN cp -r build/* /usr/share/nginx/html
+
+FROM nginx:alpine as runner
+
+COPY --from=builder /app/build /usr/share/nginx/html
 
 CMD [ "nginx", "-g", "daemon off;"]
