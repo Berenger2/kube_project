@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comments
-          image: vlunaski/k-comment
+          image: vlunaski/k-comment:latest
 ---
 apiVersion: v1
 kind: Service

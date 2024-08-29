@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: vlunaski/k-moderation
+          image: vlunaski/k-moderation:latest
 ---
 apiVersion: v1
 kind: Service

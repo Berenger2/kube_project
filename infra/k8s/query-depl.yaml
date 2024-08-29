@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: vlunaski/k-query
+          image: vlunaski/k-query:latest
 ---
 apiVersion: v1
 kind: Service

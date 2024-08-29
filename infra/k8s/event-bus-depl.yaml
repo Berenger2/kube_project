@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: vlunaski/k-event
+          image: vlunaski/k-event:latest
 ---
 apiVersion: v1
 kind: Service
