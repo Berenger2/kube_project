@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: posts
-          image: vlunaski/k-post
+          image: vlunaski/k-post:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: posts-clusterip-srv
+  name: posts-srv
 spec:
   selector:
     app: posts

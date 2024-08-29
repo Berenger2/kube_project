@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: vlunaski/k-client
+          image: vlunaski/k-client:latest
 ---
 apiVersion: v1
 kind: Service
