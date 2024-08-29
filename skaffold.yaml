@@ -10,7 +10,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: vlunaski/k-client
+    - image: vlunaski/k-client-2
       context: client
       docker:
         dockerfile: Dockerfile
